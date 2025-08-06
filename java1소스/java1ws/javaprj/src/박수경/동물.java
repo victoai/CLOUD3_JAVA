@@ -1,0 +1,10 @@
+package 박수경;
+
+
+public class 동물 {	
+	
+	public void 짖는다() {		
+		System.out.println("짖는다");
+	}
+
+}

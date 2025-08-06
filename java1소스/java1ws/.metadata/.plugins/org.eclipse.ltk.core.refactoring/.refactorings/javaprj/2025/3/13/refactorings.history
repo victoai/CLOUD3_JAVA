@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;박수경.변수사요&apos; to &apos;변수사용&apos;&#x0D;&#x0A;- Original project: &apos;javaprj&apos;&#x0D;&#x0A;- Original element: &apos;박수경.변수사요&apos;&#x0D;&#x0A;- Renamed element: &apos;박수경.변수사용&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;변수사요&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;박수경{변수사요.java[변수사요" matchStrategy="1" name="변수사용" qualified="false" references="true" similarDeclarations="false" stamp="1743055976371" textual="false" version="1.0"/>
+</session>

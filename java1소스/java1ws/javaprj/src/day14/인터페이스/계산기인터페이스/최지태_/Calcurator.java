@@ -1,0 +1,20 @@
+package day14.인터페이스.계산기인터페이스.최지태_;
+
+public interface Calcurator {
+	int add(int su1, int su2);
+
+	double add(double su1, double su2);
+
+	int sub(int su1, int su2);
+
+	double sub(double su1, double su2);
+
+	int times(int su1, int su2);
+
+	double times(double su1, double su2);
+
+	int div(int su1, int su2);
+
+	double div(double su1, double su2);
+	
+}

@@ -1,0 +1,25 @@
+package 박수경;
+
+public class 변수사용 {
+
+	public static void main(String[] args) {
+
+
+		차 a= new 차();
+		
+		구급차 b =new 구급차();
+		
+		  //a를 쓰면 안되나요?
+		
+		차 c= b;		
+		a=b;
+		
+		
+		int aa=10;
+		aa=30;
+		
+		a.부릉();
+
+	}
+
+}

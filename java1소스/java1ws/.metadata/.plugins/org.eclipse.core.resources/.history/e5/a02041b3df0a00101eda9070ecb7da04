@@ -1,0 +1,18 @@
+package 이정호;
+
+public class Acorn {
+	
+	String name;
+	int age;
+	public Acorn(String name, int age) {
+		super();
+		this.name = name;
+		this.age = age;
+	}
+	
+	 
+	
+	
+	
+
+}

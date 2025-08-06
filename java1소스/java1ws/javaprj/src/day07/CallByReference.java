@@ -1,0 +1,38 @@
+package day07;
+
+public class CallByReference {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		          = 배열공간확보(메모리확보)하고 시작주소를 반환  
+		int[] arr = new int[]{7,8,9,10,12};
+		
+		//arr : 주소를 기억하는 변수가 필요하다. 
+		//주소를 저장하는 변수를 참조형변수라고 한다 
+		
+		
+		
+		//배열 출력하기 
+		/*
+		for( int i=0 ; i< arr.length ; i++) {
+			System.out.println( arr[i]);
+		}*/
+		
+		printArray( arr);
+
+	}	
+	
+	//배열출력하는 함수 만들기 
+	//함수명  : printArray
+	//기능  : 배열출력하기
+	//입력  : int[] 배열
+	//반환  : X	
+	
+	public static void printArray(int[] arr) {
+		
+		for( int i=0; i< arr.length ; i++) {
+			System.out.println(  arr[i]);
+		}
+	}
+
+}

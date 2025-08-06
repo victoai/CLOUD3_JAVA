@@ -1,0 +1,14 @@
+package 박수경;
+
+public class 객체this실습하기 {
+
+	public static void main(String[] args) {
+		 
+		Person 박수경  =  new Person("박수경" , 10000);
+		
+		
+		박수경.밥먹기();     // 밥먹기() 
+		박수경.공부한다();    //공부한다()
+	}
+
+}

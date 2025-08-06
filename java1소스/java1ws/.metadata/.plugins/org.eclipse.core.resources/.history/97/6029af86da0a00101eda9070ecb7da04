@@ -1,0 +1,30 @@
+package 박수경;
+
+public class 객체this실습하기 {
+
+	public static void main(String[] args) {
+		 
+		Person 박수경  =  new Person("박수경" , 10000);
+		
+		
+		박수경.밥먹기();     // 밥먹기()    객체의 정보가 전달된다    밥먹기( 박수경 );
+		박수경.공부한다();    //공부한다()
+		
+		
+		System.out.println( 박수경.toString());
+		
+		
+		
+		Person 우주연  =  new Person("우주연" , 9000);
+		우주연.산책하기();
+		우주연.밥먹기();
+		우주연.공부한다();
+		우주연.공부한다();
+		우주연.공부한다();
+		우주연.공부한다();
+		System.out.println( 우주연.toString());
+		
+		Person.printHi();
+	}
+
+}

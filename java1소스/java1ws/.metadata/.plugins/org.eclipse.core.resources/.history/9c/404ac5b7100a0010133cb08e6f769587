@@ -1,0 +1,10 @@
+package 박수경;
+
+public class 잘못된다운캐스팅 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

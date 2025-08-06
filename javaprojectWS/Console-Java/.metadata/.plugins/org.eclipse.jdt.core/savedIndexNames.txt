@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+C:\Users\user\Documents\javafullstack\자바\자바프로젝트발표\소병학\Console-Java\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3293344527.index
+270247143.index
+3128478298.index

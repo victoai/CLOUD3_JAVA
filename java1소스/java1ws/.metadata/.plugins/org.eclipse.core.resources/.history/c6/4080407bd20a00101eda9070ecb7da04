@@ -1,0 +1,10 @@
+package 박수경;
+
+public class 변수사요 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
