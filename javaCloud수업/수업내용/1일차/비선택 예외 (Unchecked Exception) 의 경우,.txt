@@ -1,0 +1,55 @@
+비선택 예외 (Unchecked Exception) 의 경우, 예외가 발생하면 자동으로 상위 메서드로 전달됩니다. 이때 throws나 try-catch를 명시하지 않아도 예외가 전파됩니다.
+
+반면, 선택 예외 (Checked Exception) 는 예외가 발생해도 자동으로 상위 메서드로 전파되지 않으며, 반드시 처리하거나 throws로 명시적으로 예외를 위임해야 합니다.
+
+예시 1: 비선택 예외 (Unchecked Exception)
+java
+복사
+편집
+public class UncheckedExceptionExample {
+
+    public static void main(String[] args) {
+        // 예외가 발생하면 자동으로 상위 메서드로 전달됩니다.
+        checkAge(15);  // 예외 발생: 나이 미달
+    }
+
+    public static void checkAge(int age) {
+        if (age < 18) {
+            // Unchecked Exception 발생
+            throw new IllegalArgumentException("18세 이상만 참여 가능합니다.");
+        }
+        System.out.println("나이 확인 완료: " + age + "세");
+    }
+}
+이 코드에서는:
+IllegalArgumentException은 비선택 예외 (Unchecked Exception) 입니다.
+checkAge 메서드에서 예외가 발생하면, 예외는 main 메서드로 자동으로 전달됩니다.
+예외를 처리하지 않으면, 프로그램은 종료됩니다.
+예시 2: 선택 예외 (Checked Exception)
+java
+복사
+편집
+import java.io.*;
+
+public class CheckedExceptionExample {
+
+    public static void main(String[] args) {
+        try {
+            checkAge(15);  // 예외 발생: 나이 미달
+        } catch (IllegalArgumentException e) {
+            // 예외 처리
+            System.out.println("예외 발생: " + e.getMessage());
+        }
+    }
+
+    public static void checkAge(int age) throws IllegalArgumentException {
+        if (age < 18) {
+            // Checked Exception 발생
+            throw new IllegalArgumentException("18세 이상만 참여 가능합니다.");
+        }
+        System.out.println("나이 확인 완료: " + age + "세");
+    }
+}
+이 코드에서는:
+IllegalArgumentException은 비선택 예외이지만, checkAge 메서드는 예외를 throws 키워드로 위임해야 합니다.
+예외가 발생하면, main 메서드에서 명시적으로 예외를 처리하거나, 위임해야 합니다. 예외가 자동으로 상위 메서드로 전달되지 않습니다.

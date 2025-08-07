@@ -1,0 +1,47 @@
+is  a  :상속 
+클래스 상속
+인터페이스 상속
+
+-필드
+has a   ( 집약관계  Aggregation :  빈 다이아몬드 )
+          ( 합성관계  Composition  : 꽉찬 다이아몬드) 
+
+
+public class Car {
+   private Engin engine;
+   private Radio radio;
+
+   public Car( Engine engine, Radio radio ) {
+        this.engine  = engine;
+        this.radio  = radio;
+
+   }
+
+}
+
+
+class Engine{
+
+}
+class Radio{
+
+}
+
+
+public class Car{
+    private Engine engine;
+    private Radio radio;
+
+    public Car(){
+        engine = new Engine();
+        radio  = new Radio();
+    }
+
+}
+
+
+
+p
+
+
+

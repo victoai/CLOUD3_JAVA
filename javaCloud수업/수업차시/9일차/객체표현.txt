@@ -1,0 +1,34 @@
+ snackObject = {
+  snackName: "Crunchy Delight",
+  brand: {
+    name: "Tasty Treats",
+    country: "United States"
+  },
+  ingredients: [
+    "Potato Starch",
+    "Vegetable Oil",
+    "Salt",
+    "Spices",
+    "Sugar",
+    "Yeast Extract"
+  ],
+  nutritionalInfo: {
+    servingSize: "1 oz (28g)",
+    calories: 150,
+    totalFat: 8,
+    saturatedFat: 2,
+    cholesterol: 0,
+    sodium: 180,
+    totalCarbohydrate: 18,
+    dietaryFiber: 1,
+    sugars: 1,
+    protein: 2
+  },
+  isVegetarian: true,
+  allergens: ["None"],
+  expirationDate: new Date("2024-12-31"),
+  packaging: {
+    type: "Foil Bag",
+    recyclable: true
+  }
+};

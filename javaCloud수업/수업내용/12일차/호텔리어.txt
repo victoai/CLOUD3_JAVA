@@ -1,0 +1,30 @@
+class  호텔리어{
+
+    String name;
+    Hotel hotel;
+
+
+   public  호텔리어( String name,  Hotel hotel) {
+       this. name  = name;
+       this.hotel  = hotel;
+   }
+
+  
+  public void pritInfo(){
+
+        System.out.println( name )
+
+        System.out.println ("호텔정보") ;
+        System.out.println( hotel.toString() );  
+   }
+
+}
+
+
+class Main{
+     public static void main( String[] args) {
+               호텔리어 a = new 호텔리어("이동우" , new Hotel("신라","서대문구");
+               
+     }
+
+}

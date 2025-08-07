@@ -1,0 +1,30 @@
+interface 피자{
+  String getName();
+  int cost();
+  String mainIngredient();
+
+}
+
+
+
+
+피자가게
+
+  - 피자10개 가진다 
+
+class Store{
+  피자[] list ;
+
+
+   setList(   피자[]  list) {
+    this.list  = list;
+   } 
+
+
+   void run(){
+
+
+   }
+
+}
+

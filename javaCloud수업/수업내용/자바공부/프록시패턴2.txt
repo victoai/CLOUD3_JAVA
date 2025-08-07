@@ -1,0 +1,54 @@
+package day17;
+
+//1. Subject 인터페이스 (공통 인터페이스)
+  interface Subject {
+ void request();
+}
+
+//2. RealSubject (실제 객체)
+  class RealSubject implements Subject {
+ @Override
+ public void request() {
+     System.out.println("RealSubject: 실제 작업을 수행합니다.");
+ }
+}
+
+//3. Proxy (프록시 객체)
+  class Proxy implements Subject {
+ private Subject realSubject;
+ 
+ public Proxy() {
+	// TODO Auto-generated constructor stub
+}
+ public Proxy( Subject target) {
+	// TODO Auto-generated constructor stub
+	 
+	 this.realSubject =target;
+}
+
+ @Override
+ public void request() {
+     if (realSubject == null) {
+         realSubject = new RealSubject(); // 실제 객체를 필요할 때만 생성 (지연 로딩)
+     }
+     
+     System.out.println("Proxy: 요청을 가로채고 부가 작업을 수행합니다.");
+     realSubject.request();
+     System.out.println("Proxy: 요청을 가로채고 부가 작업을 수행합니다.");
+ }                                                                                     
+}
+
+//4. 클라이언트 코드
+public class ProxyPatternDemo {
+ public static void main(String[] args) {
+     Subject proxy = new Proxy(); // 프록시를 통해 접근
+     proxy.request(); // 요청 수행
+     
+     System.out.println("=========");
+     Subject proxy3  = new Proxy( new RealSubject()); 
+     proxy3.request();
+     System.out.println("=========");
+     Subject proxy2 = new RealSubject(); // 프록시를 통해 접근
+     proxy2.request(); // 요청 수행
+ }
+}

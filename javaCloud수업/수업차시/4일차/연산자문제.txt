@@ -1,0 +1,59 @@
+
+
+// 연산자 문제
+int num;
+num  = -5 +3 * 10 /2;
+
+
+다음코드가 수행될 때 출력되는 값을 적어 보세요
+
+int num=10;
+System.out.println( num);
+System.out.println( num++);
+System.out.println( num);
+System.out.println( --num);
+
+다음코드가 수행될 때 출력되는 값을 적어 보세요
+ int num1=10;
+ int num2=20;
+ boolean result;
+
+result  = ( ( num1>10 )&& ( num2  >10  ) ) ;
+System.out.println( result );
+result  = (  (num1 >10 ) ||  ( num2 >10 )) ;
+System.out.println( result );
+
+//비트연산자
+int num1=2;
+int num2=10;
+
+System.out.println( num1 & num2 ) ;
+System.out.println( num1  |  num2) ;
+System.out.println( num1 ^ num2 );
+System.out.println( ~num1) ;
+
+ 
+int num=8;
+Sysetm.out.println(  num += 10);
+System.out.println(  num -= 10);
+
+
+시프트연산자
+int num1=2;
+int num2=4;
+System.out.println(  num  << 2);
+System.out.println(  num2 >> 1 );
+
+//
+
+
+
+
+
+
+
+
+
+
+
+

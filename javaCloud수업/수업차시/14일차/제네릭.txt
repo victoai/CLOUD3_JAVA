@@ -1,0 +1,105 @@
+제네릭
+
+자료형을 필요에 따라 동적으로 정할 수 있도록 해 줌
+컴파일 시점에 type check함 
+
+ArrayList 제네릭스 버전 이전에는 모든종류의 객체가 저장가능 하였음 
+
+
+1) 내가 실수로 잘못담아도 에러를 주지 않는다   (다른 것을 담아도 에러를 잡아내지 못함) 
+=> 결국 실행시 형변환, 다운캐스팅에 오류가 발생한다    ClassCastException
+=> 실행시점에 날 수 있는 오류를 컴파일시점으로  끌어올림 , 컴파일시점에 체크될 수 있도록 함 
+=> 지네릭스를 통해서 원하는 type만  안전하게 담을 수 있다 
+ 
+2)  다운캐스팅의 불편함을 덜어줌
+
+3) 만드는 방법  : 다이아몬드연산자,  타입변수 사용
+
+   class MyGeneric< T> {
+
+   }
+
+#################
+제네릭버전이 아닌것
+#################
+
+class ToyBox{
+  
+    private Object[]  list;
+    private int index;
+
+    public ToyBox() {
+           list = new Object[10];
+           index=0;
+    }
+
+   public void add( Object toy) {   
+        list[index] = toy;
+        index++;
+   }
+
+   public Object get( int i ) {
+           return list[i];
+    }
+}
+
+###############
+제네릭 버전
+###############
+
+class ToyBoxG<T>{
+  
+    private Object[]  list;
+    private int index;
+
+    public ToyBox() {
+           list = new Object[10];
+           index=0;
+    }
+
+   public void add( T toy) {   
+        list[index] = toy;
+        index++;
+   }
+
+   public T  get( int i ) {
+           return  (T) list[i];
+    }
+
+}
+
+
+#####################
+제한된 제네릭 만들기
+####################
+
+
+class ToyBoxG<T extends Toy>{
+  
+    private Object[]  list;
+    private int index;
+
+    public ToyBox() {
+           list = new Object[10];
+           index=0;
+    }
+
+   public void add( T toy) {   
+        list[index] = toy;
+        index++;
+   }
+
+   public T  get( int i ) {
+           return  (T) list[i];
+    }
+
+}
+
+ 
+
+
+
+
+
+
+

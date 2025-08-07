@@ -1,0 +1,25 @@
+class A{
+   int a ;
+   int b;
+   int c; 
+
+  public void printInfo(){
+      System.out.println( a  );
+      System.out.println( b  );
+      System.out.println( c );
+  }
+}
+
+///////////////////////////////////////////     다음 중 객체를 만들 수 있는 클래스는 ?
+class B{
+
+     static int a;
+     static int b;
+     static int c;
+     public static void printInfo(){
+           System.out.println( a);
+           System.out.println( b) ;
+           System.out.println( c);
+     }
+
+}

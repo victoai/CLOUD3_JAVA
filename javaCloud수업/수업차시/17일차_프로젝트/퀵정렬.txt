@@ -1,0 +1,55 @@
+public class QuickSort {
+    
+    public static void quickSort(int[] array, int low, int high) {
+        if (low < high) {
+            // 파티션 인덱스를 얻음
+            int pi = partition(array, low, high);
+
+            // 파티션 인덱스를 기준으로 왼쪽과 오른쪽 부분 배열을 재귀적으로 정렬
+            quickSort(array, low, pi - 1);
+            quickSort(array, pi + 1, high);
+        }
+    }
+
+    // 배열을 분할하고, 피벗보다 작은 값은 왼쪽, 큰 값은 오른쪽에 위치시킴
+    private static int partition(int[] array, int low, int high) {
+        int pivot = array[high]; // 마지막 요소를 피벗으로 선택
+        int i = (low - 1); // 작은 요소의 인덱스
+
+        for (int j = low; j < high; j++) {
+            // 현재 요소가 피벗보다 작은 경우
+            if (array[j] < pivot) {
+                i++;
+
+                // 작은 요소를 i 인덱스로 교환
+                int temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+
+        // 피벗 요소를 올바른 위치에 놓음
+        int temp = array[i + 1];
+        array[i + 1] = array[high];
+        array[high] = temp;
+
+        return i + 1;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {10, 7, 8, 9, 1, 5};
+        int n = arr.length;
+
+        System.out.println("Original array:");
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+
+        quickSort(arr, 0, n - 1);
+
+        System.out.println("\nSorted array:");
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
+}

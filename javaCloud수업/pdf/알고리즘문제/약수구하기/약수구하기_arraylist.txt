@@ -1,0 +1,41 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class DivisorCalculator {
+
+    /**
+     * 주어진 정수의 약수를 배열로 반환하는 메서드.
+     *
+     * @param number 약수를 구할 정수
+     * @return 약수가 담긴 배열
+     */
+    public static int[] getDivisors(int number) {
+        List<Integer> divisorList = new ArrayList<>();
+        
+        // 1부터 number까지 순회하며 약수를 찾는다.
+        for (int i = 1; i <= number; i++) {
+            if (number % i == 0) {
+                divisorList.add(i);
+            }
+        }
+        
+        // List를 배열로 변환
+        int[] divisors = new int[divisorList.size()];
+        for (int i = 0; i < divisorList.size(); i++) {
+            divisors[i] = divisorList.get(i);
+        }
+        
+        return divisors;
+    }
+    
+    public static void main(String[] args) {
+        int num = 28;  // 예시 숫자
+        int[] divisors = getDivisors(num);
+        
+        System.out.print(num + "의 약수: ");
+        for (int divisor : divisors) {
+            System.out.print(divisor + " ");
+        }
+        System.out.println();
+    }
+}

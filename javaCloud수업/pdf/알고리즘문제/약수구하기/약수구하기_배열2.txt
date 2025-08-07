@@ -1,0 +1,40 @@
+import java.util.Arrays;
+
+public class DivisorCalculator {
+
+    /**
+     * 주어진 정수의 약수를 배열로 반환하는 메서드 (제곱근 활용).
+     *
+     * @param number 약수를 구할 정수
+     * @return 약수가 담긴 배열
+     */
+    public static int[] getDivisors(int number) {
+        int[] temp = new int[number / 2 + 1]; // number의 절반 크기 정도면 충분
+        int count = 0;
+
+        // √n까지만 검사하여 약수를 구함
+        int sqrt = (int) Math.sqrt(number);
+        for (int i = 1; i <= sqrt; i++) {
+            if (number % i == 0) {
+                temp[count++] = i; // 작은 약수 저장
+                int pair = number / i;
+                if (i != pair) { // 중복 방지 (제곱수 제외)
+                    temp[count++] = pair;
+                }
+            }
+        }
+
+        // 실제 크기만큼 복사 후 정렬하여 반환
+        int[] result = Arrays.copyOf(temp, count);
+        Arrays.sort(result);
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int num = 28; // 예제 숫자
+        int[] divisors = getDivisors(num);
+
+        System.out.print(num + "의 약수: ");
+        System.out.println(Arrays.toString(divisors));
+    }
+}

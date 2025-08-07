@@ -1,0 +1,135 @@
+class Fruit {
+    private String name;
+    private String color;
+
+    // 생성자
+    public Fruit(String name, String color) {
+        this.name = name;
+        this.color = color;
+    }
+
+    // Getter와 Setter
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    // 과일 정보 출력 메서드
+    public void printFruitInfo() {
+        System.out.println("Fruit: " + name);
+        System.out.println("Color: " + color);
+    }
+}
+// Strawberry 클래스
+class Strawberry extends Fruit {
+    private String size;
+    private int sweetnessLevel; // 1에서 10까지의 당도
+
+    // 생성자
+    public Strawberry(String size, int sweetnessLevel) {
+        super("Strawberry", "Red");
+        this.size = size;
+        this.sweetnessLevel = sweetnessLevel;
+    }
+
+    // Getter와 Setter
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public int getSweetnessLevel() {
+        return sweetnessLevel;
+    }
+
+    public void setSweetnessLevel(int sweetnessLevel) {
+        this.sweetnessLevel = sweetnessLevel;
+    }
+
+    // 딸기 정보 출력 메서드 (오버라이드)
+    @Override
+    public void printFruitInfo() {
+        super.printFruitInfo();
+        System.out.println("Size: " + size);
+        System.out.println("Sweetness Level: " + sweetnessLevel + "/10");
+    }
+}
+
+// Peach 클래스
+class Peach extends Fruit {
+    private boolean hasFuzz; // 복숭아 껍질에 털이 있는지 여부
+
+    // 생성자
+    public Peach(boolean hasFuzz) {
+        super("Peach", "Pink");
+        this.hasFuzz = hasFuzz;
+    }
+
+    // Getter와 Setter
+    public boolean hasFuzz() {
+        return hasFuzz;
+    }
+
+    public void setFuzz(boolean hasFuzz) {
+        this.hasFuzz = hasFuzz;
+    }
+
+    // 복숭아 정보 출력 메서드 (오버라이드)
+    @Override
+    public void printFruitInfo() {
+        super.printFruitInfo();
+        System.out.println("Has Fuzz: " + (hasFuzz ? "Yes" : "No"));
+    }
+}
+
+// Apple 클래스
+class Apple extends Fruit {
+    private String variety; // 사과 품종
+    private int tartnessLevel; // 1에서 10까지의 신맛 정도
+
+    // 생성자
+    public Apple(String variety, int tartnessLevel) {
+        super("Apple", "Green or Red");
+        this.variety = variety;
+        this.tartnessLevel = tartnessLevel;
+    }
+
+    // Getter와 Setter
+    public String getVariety() {
+        return variety;
+    }
+
+    public void setVariety(String variety) {
+        this.variety = variety;
+    }
+
+    public int getTartnessLevel() {
+        return tartnessLevel;
+    }
+
+    public void setTartnessLevel(int tartnessLevel) {
+        this.tartnessLevel = tartnessLevel;
+    }
+
+    // 사과 정보 출력 메서드 (오버라이드)
+    @Override
+    public void printFruitInfo() {
+        super.printFruitInfo();
+        System.out.println("Variety: " + variety);
+        System.out.println("Tartness Level: " + tartnessLevel + "/10");
+    }
+}

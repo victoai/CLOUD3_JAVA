@@ -1,0 +1,18 @@
+class Engine {
+    private int horsepower;
+
+    // 생성자
+    public Engine(int horsepower) {
+        this.horsepower = horsepower;
+    }
+
+    // Getter
+    public int getHorsepower() {
+        return horsepower;
+    }
+
+    // 엔진 정보 출력 메서드
+    public void printEngineInfo() {
+        System.out.println("Engine Horsepower: " + horsepower  );
+    }
+}

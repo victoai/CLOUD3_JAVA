@@ -1,0 +1,25 @@
+복습 퀴즈)!
+
+모든 클래스는 Object를 상속받는다. 
+Object형의 객체는 모든 클래스로 다운캐스팅이 가능하다 
+그러나 실제 객체를 고려하여 다운캐스팅해야 한다.  ClassCastException  발생 
+
+
+퀴즈)
+Object 
+
+   -A (extends Object) 
+     놀기()
+   -B (extends Object)
+     공부하기()  
+
+Object o = new A();
+A a =  (A) o;    --->1번
+B b  = (B) o;    --->2번
+
+1, 2번 중에서 오류가 발생하는 코드는 ?
+ 
+
+상속관계에서 업캐스팅과 다운캐스팅 (형변환)
+
+

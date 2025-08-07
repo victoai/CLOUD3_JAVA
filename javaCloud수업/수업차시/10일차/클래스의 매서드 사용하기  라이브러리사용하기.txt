@@ -1,0 +1,16 @@
+class A{
+
+  public String aMethod(){
+
+      return "나는 인스턴스매서드 , 객체생성이후 사용할 수 있어 ");
+  }
+
+}
+
+
+class B{
+    public static  String bMethod(){
+          return  "나는 static매서드  객체생성이 필요없어  !!");
+    }
+
+}

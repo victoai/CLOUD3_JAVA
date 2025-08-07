@@ -1,0 +1,30 @@
+public class ReverseCharArray {
+    public static void reverse(char[] array) {
+        int left = 0;
+        int right = array.length - 1;
+
+        // 좌우에서 시작하여 중간으로 이동하며 요소 교환
+        while (left < right) {
+            // 요소 교환
+            char temp = array[left];
+            array[left] = array[right];
+            array[right] = temp;
+
+            // 인덱스를 이동
+            left++;
+            right--;
+        }
+    }
+
+    public static void main(String[] args) {
+        char[] chars = {'H', 'e', 'l', 'l', 'o'};
+
+        System.out.println("Before reversing:");
+        System.out.println(chars);
+
+        reverse(chars);
+
+        System.out.println("After reversing:");
+        System.out.println(chars);
+    }
+}

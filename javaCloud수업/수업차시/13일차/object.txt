@@ -1,0 +1,77 @@
+
+##########
+Object 클래스 
+##########
+
+
+최상위 클래스 
+모든클래스는 Object를 상속받는다. 피할 수 없다.
+Object 클래스는 멤버변수는 없고 11개의 매서드가 제공된다
+
+정말 알아야하는 두 개의 매서드를 알아본다
+toString()과  equals()  
+ 
+        => class Score extends Object 
+class Score{
+   
+     String name;
+     int kor;
+     int eng;
+     int total;
+
+     public Score() {
+               this.name  = name;
+               this.kor = kor;
+               this.eng = eng;
+               calc();               
+     }
+    
+     private void calc() {
+           total  = kor+eng;
+     }
+
+     @Override
+     public String toString() {
+              return  kor + " "  + eng  +" " + total ;
+     }
+
+}
+
+##toString()매서드###
+객체에 대한 정보를 문자열로 제공할 목적으로 만들어져 있다
+
+## toString매서드를 오버라이딩(재정의 하지 않는다면??)
+당연히 상속받은  부모의 기능이 그대로 동작하게 된다.
+
+
+Book클래스와 
+Customer클래스 만들고
+book객체와 customer 객체의 정보를 출력해 보자  !!
+
+==>
+객체를 만들고 값을 담고 정보를 얻어와서 출력하는 가장 기본적인 코드에 
+이미 부모의 매서드를 재정의하는 코딩이 사용되고 있다 .  
+(캡슐화, 상속, 오버라이딩의 문법이 적용되고 있다)
+
+모든 객체는  Object로 다뤄질수 있다 
+Object배열에 저장할수 있다 
+Object배열에 있는 모든 객체에게 객체정보얻어와 ( toString()  매서드)를 호출하는 자신이 오버라이드한  각 기 다른 내용이 얻어지는것을 볼 수 있다 .  
+
+다형성
+하나의 메시지(같은 호출방법)   ->  각 객체가 다르게 동작한다 (각 기 다른 내용이 수행된다) 
+
+
+!!
+두 객체를  Object로  다뤄보면서  객체의 정보를 출력해보자 !!
+
+
+######
+equals
+######
+객체가 같은지를 판별하는 매서드이다.  Object의 equals는  객체의 주소를 비교한다 
+객체가 같은지는 어떤 내용으로 할지는 각 클래스에서 equals를 재정의 해서 사용해야 한다 
+
+Acorn 클래스를 만들고 
+두 acorn객체가 원하는 내용으로 동일한지  올바른 값을 얻기 위해 equals를 재정의 하자 
+
+

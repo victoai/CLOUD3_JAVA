@@ -1,0 +1,64 @@
+#include <stdio.h>
+
+// 구조체 선언
+typedef struct {
+    int 설탕;
+    int 프리마;
+    int 원두;
+    int 물;
+    int 매출금액;
+} 커피데이타;
+
+// 현재 커피 정보 출력 함수
+void printInfo(커피데이타 coffee) {
+    printf("<<현재 커피 정보 출력>>\n");
+    printf("매출 금액: %d\n", coffee.매출금액);
+    printf("물: %d\n", coffee.물);
+    printf("설탕: %d\n", coffee.설탕);
+    printf("원두: %d\n", coffee.원두);
+    printf("프리마: %d\n", coffee.프리마);
+}
+
+// 커피 재료 추가 함수
+void fillCoffee(커피데이타 *coffee) {
+    coffee->물 += 1000;
+    coffee->원두 += 100;
+    coffee->설탕 += 100;
+    coffee->프리마 += 100;
+}
+
+// 밀크 커피 만들기 함수
+const char* 밀크커피만들기(커피데이타 *coffee, int 돈) {
+    if (돈 == 100) {
+        printf("밀크 커피 만들기\n");
+        int 물량 = 100;
+        int 원두량 = 10;
+        int 설탕량 = 10;
+        int 프리마량 = 10;
+        coffee->물 -= 물량;
+        coffee->원두 -= 원두량;
+        coffee->설탕 -= 설탕량;
+        coffee->프리마 -= 프리마량;
+        return "밀크커피 드세요";
+    }
+    return "";
+}
+
+int main() {
+    // 커피 데이터 초기화
+    커피데이타 coffee = {1000, 1000, 1000, 10000, 0};
+
+    // 현재 커피 정보 출력
+    printInfo(coffee);
+
+    // 커피 재료 추가
+    fillCoffee(&coffee);
+
+    // 밀크 커피 만들기
+    const char* result = 밀크커피만들기(&coffee, 100);
+    if (result[0] != '\0') {
+        printf("%s\n", result);
+    }
+
+    return 0;
+}
