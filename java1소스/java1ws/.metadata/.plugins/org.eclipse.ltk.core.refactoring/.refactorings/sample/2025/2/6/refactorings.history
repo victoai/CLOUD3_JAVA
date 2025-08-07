@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;sample.ThrowExceptionExample&apos; to &apos;예외처리unchecked&apos;&#x0D;&#x0A;- Original project: &apos;sample&apos;&#x0D;&#x0A;- Original element: &apos;sample.ThrowExceptionExample&apos;&#x0D;&#x0A;- Renamed element: &apos;sample.예외처리unchecked&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ThrowExceptionExample&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;sample{ThrowExceptionExample.java[ThrowExceptionExample" matchStrategy="1" name="예외처리unchecked" qualified="false" references="true" similarDeclarations="false" stamp="1738822847155" textual="false" version="1.0"/>
-</session>
