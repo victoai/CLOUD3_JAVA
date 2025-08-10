@@ -1,0 +1,71 @@
+import java.util.Arrays;
+
+public class DijkstraExample {
+    
+    // 그래프의 정점 수
+    private static final int V = 5;
+
+    // 최단 경로를 찾는 메서드
+    public static void dijkstra(int[][] graph, int startVertex) {
+        int[] distances = new int[V];
+        boolean[] visited = new boolean[V];
+
+        // 거리를 무한대로 초기화하고, 시작 정점의 거리는 0으로 설정
+        Arrays.fill(distances, Integer.MAX_VALUE);
+        distances[startVertex] = 0;
+
+        for (int i = 0; i < V - 1; i++) {
+            // 가장 가까운 정점을 찾습니다
+            int u = minDistance(distances, visited);
+            visited[u] = true;
+
+            // 인접한 정점의 거리를 업데이트합니다
+            for (int v = 0; v < V; v++) {
+                if (!visited[v] && graph[u][v] != 0 && distances[u] != Integer.MAX_VALUE
+                        && distances[u] + graph[u][v] < distances[v]) {
+                    distances[v] = distances[u] + graph[u][v];
+                }
+            }
+        }
+
+        // 결과를 출력합니다
+        printSolution(distances);
+    }
+
+    // 가장 가까운 정점을 찾는 메서드
+    private static int minDistance(int[] distances, boolean[] visited) {
+        int min = Integer.MAX_VALUE;
+        int minIndex = -1;
+
+        for (int v = 0; v < V; v++) {
+            if (!visited[v] && distances[v] <= min) {
+                min = distances[v];
+                minIndex = v;
+            }
+        }
+
+        return minIndex;
+    }
+
+    // 결과를 출력하는 메서드
+    private static void printSolution(int[] distances) {
+        System.out.println("정점 \t 거리");
+        for (int i = 0; i < V; i++) {
+            System.out.println(i + " \t " + distances[i]);
+        }
+    }
+
+    public static void main(String[] args) {
+        // 그래프를 인접 행렬로 표현
+        int[][] graph = new int[][] {
+            {0, 10, 0, 30, 100},
+            {10, 0, 50, 0, 0},
+            {0, 50, 0, 20, 10},
+            {30, 0, 20, 0, 60},
+            {100, 0, 10, 60, 0}
+        };
+
+        // 시작 정점을 0으로 설정
+        dijkstra(graph, 0);
+    }
+}

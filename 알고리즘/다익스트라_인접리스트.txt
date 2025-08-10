@@ -1,0 +1,95 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class DijkstraDirectedGraph {
+
+    static class Edge {
+        int to, weight;
+
+        Edge(int to, int weight) {
+            this.to = to;
+            this.weight = weight;
+        }
+    }
+
+    // 그래프의 정점 수
+    private static final int V = 5;
+
+    // 다익스트라 알고리즘
+    public static void dijkstra(List<List<Edge>> graph, int startVertex) {
+        int[] distances = new int[V];
+        boolean[] visited = new boolean[V];
+
+        // 거리를 무한대로 초기화하고, 시작 정점의 거리는 0으로 설정
+        Arrays.fill(distances, Integer.MAX_VALUE);
+        distances[startVertex] = 0;
+
+        for (int i = 0; i < V - 1; i++) {
+            // 가장 가까운 정점을 찾습니다
+            int u = minDistance(distances, visited);
+            visited[u] = true;
+
+            // 인접한 정점의 거리를 업데이트합니다
+            for (Edge edge : graph.get(u)) {
+                int v = edge.to;
+                int weight = edge.weight;
+                if (!visited[v] && distances[u] != Integer.MAX_VALUE
+                        && distances[u] + weight < distances[v]) {
+                    distances[v] = distances[u] + weight;
+                }
+            }
+        }
+
+        // 결과를 출력합니다
+        printSolution(distances);
+    }
+
+    // 가장 가까운 정점을 찾는 메서드
+    private static int minDistance(int[] distances, boolean[] visited) {
+        int min = Integer.MAX_VALUE;
+        int minIndex = -1;
+
+        for (int v = 0; v < V; v++) {
+            if (!visited[v] && distances[v] <= min) {
+                min = distances[v];
+                minIndex = v;
+            }
+        }
+
+        return minIndex;
+    }
+
+    // 결과를 출력하는 메서드
+    private static void printSolution(int[] distances) {
+        System.out.println("정점 \t 거리");
+        for (int i = 0; i < V; i++) {
+            System.out.println(i + " \t " + (distances[i] == Integer.MAX_VALUE ? "INF" : distances[i]));
+        }
+    }
+
+    public static void main(String[] args) {
+        // 그래프를 인접 리스트로 표현
+        List<List<Edge>> graph = new ArrayList<>();
+        for (int i = 0; i < V; i++) {
+            graph.add(new ArrayList<>());
+        }
+
+        // 그래프의 간선 추가 (유방향 그래프 예시)
+        addEdge(graph, 0, 1, 10);
+        addEdge(graph, 0, 3, 30);
+        addEdge(graph, 0, 4, 100);
+        addEdge(graph, 1, 2, 50);
+        addEdge(graph, 2, 3, 20);
+        addEdge(graph, 2, 4, 10);
+        addEdge(graph, 3, 4, 60);
+
+        // 시작 정점을 0으로 설정
+        dijkstra(graph, 0);
+    }
+
+    // 간선을 그래프에 추가하는 메서드 (유방향)
+    private static void addEdge(List<List<Edge>> graph, int from, int to, int weight) {
+        graph.get(from).add(new Edge(to, weight));
+    }
+}
