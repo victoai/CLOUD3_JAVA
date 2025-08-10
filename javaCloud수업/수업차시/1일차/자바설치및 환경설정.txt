@@ -1,7 +1,7 @@
 
- jdk  11 설치와  환경변수 설정 
+ jdk  17 설치와  환경변수 설정 
 
-https://www.oracle.com/kr/java/technologies/javase/jdk11-archive-downloads.html
+https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
  
 
 
