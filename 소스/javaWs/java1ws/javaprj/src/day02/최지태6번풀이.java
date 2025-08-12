@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class 최지태6번풀이 {
 
 	public static void main(String[] args) {
+		
 		  
 			String name;
 			int kor;
