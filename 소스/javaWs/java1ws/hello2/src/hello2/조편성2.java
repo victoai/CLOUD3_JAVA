@@ -25,8 +25,8 @@ public class 조편성2 {
         // 팀 구성 결과를 Map에 저장
         Map<Integer, ArrayList<String>> teamMap = new LinkedHashMap<>();
         int index = 0;
-        for (int team = 1; team <= 5; team++) {
-            int memberCount = (team <= 4) ? 4 : 3;
+        for (int team = 1; team <= 4; team++) {
+            int memberCount = (team <= 3) ? 5 : 4;
             ArrayList <String> teamMembers = new ArrayList<>();
             for (int i = 0; i < memberCount; i++) {
                 teamMembers.add(students.get(index++));

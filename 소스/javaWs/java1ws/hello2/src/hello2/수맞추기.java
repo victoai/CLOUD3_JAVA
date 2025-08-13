@@ -25,7 +25,7 @@ public class 수맞추기 {
 			if( input  > randomSu) {
 				
 				System.out.println(" 더 작은 수 입력");
-			}else {
+			}else if( input <  randomSu){
 				
 				System.out.println(" 더 큰 수  입력");
 			}
