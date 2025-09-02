@@ -1,6 +1,6 @@
 package day21.interrupt;
 
-/*
+ 
 class Counter   extends Thread {	
 	
 	public void run() {
@@ -19,7 +19,9 @@ class Counter   extends Thread {
 		 
 	}
 }
-*/
+ 
+
+/*
 class Counter extends Thread {
     public void run() {
         for (int i = 10; i > 0; i--) {
@@ -40,3 +42,4 @@ class Counter extends Thread {
         }
     }
 }
+*/

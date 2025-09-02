@@ -13,7 +13,8 @@ public class 박예린문제풀이 {
 		double h =2500000;
 		double k  =1800000;
 		
-		//final int MAX=100;
+		
+	 //final int MAX=100;
 		
 		while(  k<=h) {
 			y++;

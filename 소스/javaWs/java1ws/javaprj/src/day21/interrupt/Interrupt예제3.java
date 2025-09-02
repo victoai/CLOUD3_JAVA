@@ -39,19 +39,19 @@ public class Interrupt예제3 {
 class Counter2 extends Thread{
 
     public void run() {
-        int i=10;
+        int i=1000000000;
 
         while( i !=0  &&  !isInterrupted() ) {   //인터럽트가 발생되기전까지 반복
         	
               System.out.println( i--);
-              try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block   // 잠에서 깨어난 경우   
-				 e.printStackTrace();
-				 //  interrupt(); //  주석 부분 		 ( 이 부분의  의미 !!)				 
-				// return;
-			}
+           //   try {
+			//	Thread.sleep(1000);
+		//	} catch (InterruptedException e) {
+			//	// TODO Auto-generated catch block   // 잠에서 깨어난 경우   
+			//	 e.printStackTrace();
+				 //Thread.currentThread().interrupt();	//	 ( 이 부분의  의미 !!)				 
+			    // return;
+			//}
            
         }
         

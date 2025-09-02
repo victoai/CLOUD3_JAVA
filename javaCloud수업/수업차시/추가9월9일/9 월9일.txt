@@ -1,0 +1,113 @@
+
+복습
+체크리스트제공
+
+
+
+0) 절차지향적코드로 내정보 출력하기 구경하기 
+
+
+1) 변수와 매서드 
+2) 객체지향적으로 코드 작성하기   , 객체지향적으로 데이터 저장하고 꺼내오기 
+3) 상속과 다형성
+
+
+
+
+class Acorn{
+    String name;
+    String address;
+
+   //
+   Acorn( String name, String address){
+      this.name  = name;
+      this.address = address;
+   }
+
+  //세터
+  //게터
+
+   String toString(){
+      return  name + address;
+   }
+}
+
+
+
+interface  음료를마실수있는{
+   void  drink();         
+}
+
+
+ 
+1. 두 수의 합을 반환하는 매서드만들고 사용하기
+2. 1~10까지의 합을 반환하는 매서드 만들고 사용하기
+3. Actor클래스를 만들고 배우정보 출력하기 ( 이름: 이채민, 대표작:폭군의 세프 , 소속사:바로엔터테인먼트 )
+4. Acorn을 상속받은 클래스를 만들고 나이와 취미를 추가해서  내 정보 출력하기
+5. 음료를마실수있는 인터페이스를 구현한 클래스를 만드시오
+
+ 
+
+
+#####
+흉내내기  절차지향코드로  Actor정보 출력하기
+
+
+class Actor{
+     String 이름;
+     String 대표작;
+     String  소속사;  
+}
+
+
+
+
+public class ActorMain{
+
+      public static void main( String[] args){
+               Actor actor  =new Actor();
+               input(actor);
+               print(actor);
+              
+      }
+
+
+     public static void input( Actor actor){
+
+               actor.이름="이채민";
+               actor.대표작="폭군의 세프";
+               actor.소속사="바로엔터테인먼트";
+
+
+  /*
+
+
+     Scanner sc = new Scanner( System.in);
+     actor.이름  = sc.nextLine();
+     actor.대표작  = sc.nextLine();
+     actor.소속사  = sc.nextLine();
+
+
+*/
+    }
+
+
+
+   public static void print( Actor  actor){
+
+            System.out.println(actor.이름);
+            System.out.println(actor.대표작);
+            System.out.println(actor.소속사);
+
+   } 
+
+   
+
+}
+
+
+
+
+
+
+

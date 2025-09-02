@@ -23,7 +23,7 @@ class MyThread2 extends Thread {
 
     private boolean someCondition() {
         // 특정 조건을 체크 (예: 5초가 지났다면 중단)
-        return System.currentTimeMillis() % 5000 == 0;
+    	 return System.currentTimeMillis() / 1000 % 5 == 0; // 예: 5초 단위로 종료
     }
 }
 
