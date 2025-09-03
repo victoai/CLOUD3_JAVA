@@ -9,7 +9,7 @@ public class Score정렬하기_라이브러리 {
 		Score[] arr  = new Score[5];
 		
 		
-		arr[0]= new Score("박예린", 100,90);
+		arr[0]= new Score("우동훈", 100,90);
 		arr[1]= new Score("이정호", 99,90);
 		arr[2]= new Score("김민환", 89,100);
 		arr[3]= new Score("김유민", 88,77);

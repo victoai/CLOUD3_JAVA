@@ -1,7 +1,6 @@
 package day23.추가;
 
-//
-//public class Score  extends Object{
+ 
 public class Score  implements Comparable<Score>{
 	String name;
 	int kor;
@@ -46,9 +45,7 @@ public class Score  implements Comparable<Score>{
 	}
 	
  
-	//매서드
-	//toString() 
-	
+	 
 	
 	
 	
